@@ -69,8 +69,8 @@ that:
     group.
 
 ``` r
-aov <- stats::aov(Response ~ Dose, data = df)
-base::summary(aov)
+aov <- aov(Response ~ Dose, data = df)
+summary(aov)
 ```
 
     ##             Df Sum Sq Mean Sq F value              Pr(>F)    
