@@ -34,7 +34,7 @@ is imported as type double, while dose variable is imported as
 factorial.
 
 ``` r
-df <- readr::read_csv(
+df <- read_csv(
     "data/dose-response.csv",
     col_types = cols(
         Dose = col_factor(),
@@ -86,7 +86,13 @@ find this another analysis tool has to be used.
 
 ## Dunnett’s test
 
-A dunnett test is performed to find NOAEL and LOAEL.
+A dunnett test is performed to find NOAEL and LOAEL. The Dunnett test assumes:
+
+-   Normality: Dependent variable has to be normally distributed in each
+    group.
+-   Homogeneity of variance: Equal variance distribution in the
+    populations.
+-   Equal sample sizes: All groups must have the same amount of observations.
 
 ``` r
 DunnettTest(
